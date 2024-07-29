@@ -17,7 +17,7 @@
 	<main class="container">
 		<section>
 			<p class="display-6">Cadastro de Alunos:</p>
-			<form class="col-10 offset-1" onsubmit="save(); return false">
+			<form class="col-10 offset-1" id="formStudent" onsubmit="save();return false">
 				<div class="row mb-3">
 					<label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
 					<div class="col-sm-10">
@@ -45,15 +45,15 @@
 					<label class="col-sm-2 col-form-label">Turnos:</label>
 					<div class="col-sm-4"">
 						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioShift" id="flexRadioDaytimeShift" checked>
+							<input class="form-check-input" value="1" type="radio" name="flexRadioShift" id="flexRadioDaytimeShift" checked>
 							<label class="form-check-label" for="flexRadioDaytimeShift">Diurno</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioShift" id="flexRadioAfternoonShift">
+							<input class="form-check-input" value="2" type="radio" name="flexRadioShift" id="flexRadioAfternoonShift">
 							<label class="form-check-label" for="flexRadioAfternoonShift">Vespertino</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioShift" id="flexRadioNightShift" >
+							<input class="form-check-input" value="3" type="radio" name="flexRadioShift" id="flexRadioNightShift" >
 							<label class="form-check-label" for="flexRadioNightShift">Noturno</label>
 						</div>
 					</div>
