@@ -14,7 +14,7 @@
 </head>
 <body>
 	<header class=" bg-body-secondary text-center display-4 py-2 mb-3">Cadastro de Alunos</header>
-	<main class="container">
+	<main class="container vw-100">
 		<section>
 			<p class="display-6">Cadastro de Alunos:</p>
 			<form class="col-10 offset-1" id="formStudent" onsubmit="save();return false">
@@ -35,8 +35,8 @@
 					</div>
 				</div>
 				<div class="row mb-3">
-					<label for="selectCourses" class="col-2 col-form-label">Cursos:</label>
-					<div class="col-5">
+					<label for="selectCourses" class="col-sm-2 col-form-label">Cursos:</label>
+					<div class="col-sm-5">
 						<select class="form-select" aria-label="Selecione um turno" id="selectCourses" required>
 							<option value="" disabled>Cursos:</option>
 							<option value="0">Java</option>
@@ -74,10 +74,10 @@
 						<tr>
 							<th scope="col">#</th>
 							<th scope="col">Nome</th>
-							<th scope="col">Email</th>
-							<th scope="col">Telefone</th>
-							<th scope="col">Curso</th>
-							<th scope="col">Turno</th>
+							<th scope="col" class="d-none d-sm-table-cell">Email</th>
+							<th scope="col" class="d-none d-sm-table-cell">Telefone</th>
+							<th scope="col" class="d-none d-sm-table-cell">Curso</th>
+							<th scope="col" class="d-none d-sm-table-cell">Turno</th>
 						</tr>
 					</thead>
 					<tbody></tbody>
@@ -85,7 +85,7 @@
 			</div>
 		</section>
 	</main>
-	<footer class="bg-secondary text-center text-white fixed-bottom">let Dev</footer>
+	<footer class="bg-secondary text-center text-white">let Dev</footer>
 	<script src="./js/main.js"></script>
 	<script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

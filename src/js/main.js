@@ -41,22 +41,30 @@ function save () {
 };
 
 function addNewRow (student) {
-	const table = document.getElementById('tableStudent');
-	const newRow = table.insertRow();
+  const table = document.getElementById('tableStudent');
+  const newRow = table.insertRow();
 
-	const idNode = document.createTextNode(student.id);
-	const nameNode = document.createTextNode(student.name);
-	const emailNode = document.createTextNode(student.email);
-	const phoneNode = document.createTextNode(student.phone);
-	const courseNode = document.createTextNode(courses[student.course]);
-	const shiftNode = document.createTextNode(shifts[student.shift]);
+  const idCell = newRow.insertCell();
+  idCell.appendChild(document.createTextNode(student.id));
 
-	newRow.insertCell().appendChild(idNode);
-	newRow.insertCell().appendChild(nameNode);
-	newRow.insertCell().appendChild(emailNode);
-	newRow.insertCell().appendChild(phoneNode);
-	newRow.insertCell().appendChild(courseNode);
-	newRow.insertCell().appendChild(shiftNode);
+  const nameCell = newRow.insertCell();
+  nameCell.appendChild(document.createTextNode(student.name));
+
+  const emailCell = newRow.insertCell();
+  emailCell.appendChild(document.createTextNode(student.email));
+  emailCell.classList.add('d-none', 'd-sm-table-cell');
+
+  const phoneCell = newRow.insertCell();
+  phoneCell.appendChild(document.createTextNode(student.phone));
+  phoneCell.classList.add('d-none', 'd-sm-table-cell');
+
+  const courseCell = newRow.insertCell();
+  courseCell.appendChild(document.createTextNode(courses[student.course]));
+  courseCell.classList.add('d-none', 'd-sm-table-cell');
+
+  const shiftCell = newRow.insertCell();
+  shiftCell.appendChild(document.createTextNode(shifts[student.shift]));
+  shiftCell.classList.add('d-none', 'd-sm-table-cell');
 };
 
 (function () {
