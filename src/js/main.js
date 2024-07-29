@@ -1,4 +1,13 @@
-const students = [];
+const students = [
+	{
+		id: 1,
+		name: "rafael",
+		email: "rafael@email.com",
+		phone: "(99) 99999-9999",
+		course: 1,
+		shift: 0,
+	}
+];
 
 const shifts = [
 	'Diurno',
@@ -49,3 +58,9 @@ function addNewRow (student) {
 	newRow.insertCell().appendChild(courseNode);
 	newRow.insertCell().appendChild(shiftNode);
 };
+
+(function () {
+	for (let student of students) {
+		addNewRow(student);
+	};
+} ());
