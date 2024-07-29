@@ -15,8 +15,9 @@ const courses = [
 function save () {
 	const student = {
 		id: students.length + 1,
-		nome: document.getElementById('inputName').value,
-		email: document.getElementById('inputName').value,
+		name: document.getElementById('inputName').value,
+		email: document.getElementById('inputEmail').value,
+		phone: document.getElementById('inputPhone').value,
 		course: parseInt(document.getElementById('selectCourses').value),
 		shift: parseInt(document.querySelector('input[name="flexRadioShift"]:checked').value),
 	}
