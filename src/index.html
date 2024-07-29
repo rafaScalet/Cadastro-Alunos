@@ -13,7 +13,7 @@
 	>
 </head>
 <body>
-	<header class=" bg-body-secondary text-center display-4 py-2">Cadastro de Alunos</header>
+	<header class=" bg-body-secondary text-center display-4 py-2 mb-3">Cadastro de Alunos</header>
 	<main class="container">
 		<section>
 			<p class="display-6">Cadastro de Alunos:</p>
@@ -39,9 +39,9 @@
 					<div class="col-5">
 						<select class="form-select" aria-label="Selecione um turno" id="selectCourses" required>
 							<option value="" disabled>Cursos:</option>
-							<option value="1">Java</option>
-							<option value="2">.NET</option>
-							<option value="3">Javascript</option>
+							<option value="0">Java</option>
+							<option value="1">.NET</option>
+							<option value="2">Javascript</option>
 						</select>
 					</div>
 				</div>
@@ -49,21 +49,40 @@
 					<label class="col-sm-2 col-form-label">Turnos:</label>
 					<div class="col-sm-4"">
 						<div class="form-check">
-							<input class="form-check-input" value="1" type="radio" name="flexRadioShift" id="flexRadioDaytimeShift" checked>
+							<input class="form-check-input" value="0" type="radio" name="flexRadioShift" id="flexRadioDaytimeShift" checked>
 							<label class="form-check-label" for="flexRadioDaytimeShift">Diurno</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" value="2" type="radio" name="flexRadioShift" id="flexRadioAfternoonShift">
+							<input class="form-check-input" value="1" type="radio" name="flexRadioShift" id="flexRadioAfternoonShift">
 							<label class="form-check-label" for="flexRadioAfternoonShift">Vespertino</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" value="3" type="radio" name="flexRadioShift" id="flexRadioNightShift" >
+							<input class="form-check-input" value="2" type="radio" name="flexRadioShift" id="flexRadioNightShift" >
 							<label class="form-check-label" for="flexRadioNightShift">Noturno</label>
 						</div>
 					</div>
 				</div>
 				<button class="btn btn-primary" type="submit">Cadastrar</button>
 			</form>
+		</section>
+		<hr>
+		<section>
+			<p class="display-6">Tabela de Alunos:</p>
+			<div class="col-10 offset-1">
+				<table class="table" id="tableStudent">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Email</th>
+							<th scope="col">Telefone</th>
+							<th scope="col">Curso</th>
+							<th scope="col">Turno</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
 		</section>
 	</main>
 	<footer class="bg-secondary text-center text-white fixed-bottom">let Dev</footer>
