@@ -33,6 +33,13 @@ function save () {
 		shift: parseInt(document.querySelector('input[name="flexRadioShift"]:checked').value),
 	}
 
+	const emailValidator = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+	if (!emailValidator.test(student.email)) {
+		document.getElementById('inputEmail').value = '';
+		return alert('email inválido!');
+	}
+
 	students.push(student);
 
 	addNewRow(student);
