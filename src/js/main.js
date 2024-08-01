@@ -34,10 +34,16 @@ function save () {
 	}
 
 	const emailValidator = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	const phoneValidator = /^\(\d{2}\) \d{4,5}-\d{4}$/;
 
 	if (!emailValidator.test(student.email)) {
 		document.getElementById('inputEmail').value = '';
 		return alert('email inválido!');
+	}
+
+	if (!phoneValidator.test(student.phone)) {
+		document.getElementById('inputPhone').value = '';
+		return alert('telefone inválido')
 	}
 
 	students.push(student);
